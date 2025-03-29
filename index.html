@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Selection for Data Science and AI Student - MCDM Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Selecting the Best Laptop for a Data Science and AI Student</h1>
+            <p>Multi-Criteria Decision Making Analysis using SuperDecisions</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#criteria">Criteria</a></li>
+                <li><a href="#alternatives">Alternatives</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#sensitivity">Sensitivity</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="author-info">
+            <h3>Course Information</h3>
+            <p><strong>Course:</strong> AT82.04: Business Intelligence and Analytics</p>
+            <p><strong>Semester:</strong> January 2025</p>
+            <p><strong>Student:</strong> Arya Bhavesh Shah (st125462)</p>
+            <p><strong>Institution:</strong> Asian Institute of Technology</p>
+        </div>
+        
+        <div class="section" id="introduction">
+            <h2>Introduction</h2>
+            <p>This report presents the results of a Multi-Criteria Decision Making (MCDM) analysis conducted to select the most suitable laptop for a Data Science and Artificial Intelligence student. The analysis was performed using the Analytic Hierarchy Process (AHP) implemented through SuperDecisions software.</p>
+            
+            <div class="card">
+                <h3>Objectives</h3>
+                <p>The primary objective of this analysis was to systematically evaluate various laptop alternatives based on a comprehensive set of criteria relevant to the computing needs of a Data Science and AI student. The specific objectives included:</p>
+                <ul>
+                    <li>Identifying and weighing the most important criteria for laptop selection in the context of data science and AI work</li>
+                    <li>Evaluating multiple laptop alternatives across these criteria</li>
+                    <li>Determining the optimal laptop choice based on a structured and objective methodology</li>
+                    <li>Testing the robustness of the decision through sensitivity analysis</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Methodology</h3>
+                <p>The analysis follows the Analytic Hierarchy Process (AHP) methodology, which structures complex decision problems in a hierarchical manner:</p>
+                <ol>
+                    <li><strong>Problem Structuring:</strong> Define the goal, criteria, sub-criteria, and alternatives</li>
+                    <li><strong>Pairwise Comparisons:</strong> Compare elements at each level of the hierarchy</li>
+                    <li><strong>Priority Derivation:</strong> Calculate weights for criteria and alternatives</li>
+                    <li><strong>Consistency Verification:</strong> Ensure judgments are logically consistent</li>
+                    <li><strong>Synthesis:</strong> Combine criterion-specific evaluations to obtain overall rankings</li>
+                    <li><strong>Sensitivity Analysis:</strong> Test how changes in weights affect the outcome</li>
+                </ol>
+                <p>This methodology allows for a systematic approach to laptop selection, considering both quantitative specifications and qualitative factors relevant to data science and AI tasks.</p>
+            </div>
+        </div>
+        
+        <div class="section" id="criteria">
+            <h2>Criteria Hierarchy</h2>
+            <p>The selection of the best laptop for a Data Science and AI student involves considering multiple criteria that impact performance, usability, and cost. These criteria are organized in a hierarchical structure to facilitate systematic evaluation.</p>
+            
+            <div class="chart-container">
+                <canvas id="criteriaChart"></canvas>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card criteria-card">
+                        <h3>Performance Capabilities (~40%)</h3>
+                        <p>Critical for handling intensive computing tasks in data science and AI applications.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar high" style="width: 40%"></div>
+                        </div>
+                        <h4>Sub-criteria:</h4>
+                        <ul>
+                            <li><strong>Processor (CPU):</strong> Multi-core performance for data processing</li>
+                            <li><strong>Graphics Processing (GPU):</strong> Acceleration for deep learning models</li>
+                            <li><strong>Memory (RAM):</strong> Capacity for handling large datasets</li>
+                            <li><strong>Storage:</strong> Speed and capacity for data access</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card criteria-card">
+                        <h3>Cost Considerations (~25%)</h3>
+                        <p>Balancing performance needs with budget constraints for students.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar high" style="width: 25%"></div>
+                        </div>
+                        <h4>Sub-criteria:</h4>
+                        <ul>
+                            <li><strong>Purchase Price:</strong> Initial investment</li>
+                            <li><strong>Value for Money:</strong> Performance relative to cost</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card criteria-card">
+                        <h3>Display Quality (~15%)</h3>
+                        <p>Critical for visualizing data and reducing eye strain during extended work sessions.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar medium" style="width: 15%"></div>
+                        </div>
+                        <h4>Sub-criteria:</h4>
+                        <ul>
+                            <li><strong>Resolution & Size:</strong> Screen real estate for IDEs and visualization</li>
+                            <li><strong>Color Accuracy:</strong> Critical for data visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card criteria-card">
+                        <h3>Portability Factors (~13%)</h3>
+                        <p>Important for students who need to transport their laptop between classes, library, and home.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar medium" style="width: 13%"></div>
+                        </div>
+                        <h4>Sub-criteria:</h4>
+                        <ul>
+                            <li><strong>Weight & Form Factor:</strong> Physical portability</li>
+                            <li><strong>Battery Life:</strong> Usage time away from power outlets</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card criteria-card">
+                        <h3>Connectivity & Expandability (~7%)</h3>
+                        <p>Necessary for connecting to external devices and networks.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar low" style="width: 7%"></div>
+                        </div>
+                        <h4>Sub-criteria:</h4>
+                        <ul>
+                            <li><strong>Port Selection:</strong> Variety and number of ports</li>
+                            <li><strong>Wireless Capabilities:</strong> Wi-Fi and Bluetooth standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="alternatives">
+            <h2>Laptop Alternatives</h2>
+            <p>Six distinct laptop alternatives were identified, each with different specifications and characteristics to meet the needs of Data Science and AI students.</p>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>Lenovo ThinkPad P16</h3>
+                        <p class="badge badge-accent">Workstation Performance</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> Intel Core i9-12950HX (16 cores, up to 5.0GHz)</li>
+                            <li><strong>Graphics:</strong> NVIDIA RTX A5500 (16GB GDDR6)</li>
+                            <li><strong>Memory:</strong> 64GB DDR5-4800MHz</li>
+                            <li><strong>Storage:</strong> 2TB NVMe PCIe Gen4 SSD</li>
+                            <li><strong>Display:</strong> 16" WQXGA (2560x1600) IPS, 100% sRGB</li>
+                            <li><strong>Weight:</strong> 2.95kg (6.5 lbs)</li>
+                            <li><strong>Battery:</strong> 94Wh, ~6-8 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $3,000 - $4,500</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Exceptional computing power for data processing</li>
+                            <li>Professional-grade GPU for deep learning</li>
+                            <li>Maximum RAM capacity for large datasets</li>
+                            <li>Excellent build quality and reliability</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Heaviest laptop option, limiting portability</li>
+                            <li>Most expensive alternative</li>
+                            <li>Below-average battery life</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>ASUS ROG Zephyrus G14</h3>
+                        <p class="badge badge-accent">Gaming Performance</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> AMD Ryzen 9 6900HS (8 cores, up to 4.9GHz)</li>
+                            <li><strong>Graphics:</strong> NVIDIA RTX 4060 (8GB GDDR6)</li>
+                            <li><strong>Memory:</strong> 16GB DDR5-4800MHz</li>
+                            <li><strong>Storage:</strong> 1TB NVMe PCIe Gen4 SSD</li>
+                            <li><strong>Display:</strong> 14" WQXGA (2560x1600) IPS, 120Hz</li>
+                            <li><strong>Weight:</strong> 1.65kg (3.64 lbs)</li>
+                            <li><strong>Battery:</strong> 76Wh, ~8-10 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $1,700 - $2,200</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Excellent performance-to-portability ratio</li>
+                            <li>Strong GPU performance for AI workloads</li>
+                            <li>Lightweight design despite powerful components</li>
+                            <li>Good value for the specifications</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Limited RAM in base configuration</li>
+                            <li>Smaller screen size may limit multitasking</li>
+                            <li>Fan noise under heavy load</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>MacBook Pro 16"</h3>
+                        <p class="badge badge-accent">Apple Ecosystem</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> Apple M2 Pro (10-core CPU)</li>
+                            <li><strong>Graphics:</strong> 16-core integrated GPU</li>
+                            <li><strong>Memory:</strong> 32GB unified memory</li>
+                            <li><strong>Storage:</strong> 1TB SSD</li>
+                            <li><strong>Display:</strong> 16.2" Liquid Retina XDR (3456x2234)</li>
+                            <li><strong>Weight:</strong> 2.15kg (4.7 lbs)</li>
+                            <li><strong>Battery:</strong> 100Wh, ~14-16 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $2,500 - $3,500</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Exceptional battery life for all-day work</li>
+                            <li>Outstanding display quality for data visualization</li>
+                            <li>Optimized performance for some data science tools</li>
+                            <li>Premium build quality and ecosystem integration</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Limited compatibility with some AI frameworks</li>
+                            <li>Non-upgradable components</li>
+                            <li>Higher price-to-performance ratio</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>Dell XPS 15</h3>
+                        <p class="badge badge-accent">Premium Ultrabook</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> Intel Core i7-13700H (14 cores, up to 5.0GHz)</li>
+                            <li><strong>Graphics:</strong> NVIDIA RTX 4050 (6GB GDDR6)</li>
+                            <li><strong>Memory:</strong> 32GB DDR5-4800MHz</li>
+                            <li><strong>Storage:</strong> 1TB NVMe PCIe Gen4 SSD</li>
+                            <li><strong>Display:</strong> 15.6" 3.5K OLED (3456x2160), 100% DCI-P3</li>
+                            <li><strong>Weight:</strong> 1.92kg (4.2 lbs)</li>
+                            <li><strong>Battery:</strong> 86Wh, ~8-10 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $2,000 - $2,800</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Premium build quality with sleek design</li>
+                            <li>Excellent display for data visualization</li>
+                            <li>Good balance of performance and portability</li>
+                            <li>Strong processor performance for data analysis</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Limited port selection</li>
+                            <li>Modest GPU performance for deep learning</li>
+                            <li>Thermal constraints under heavy workloads</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>Microsoft Surface Laptop Studio</h3>
+                        <p class="badge badge-accent">Versatile 2-in-1</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> Intel Core i7-11370H (4 cores, up to 4.8GHz)</li>
+                            <li><strong>Graphics:</strong> NVIDIA RTX 3050 Ti (4GB GDDR6)</li>
+                            <li><strong>Memory:</strong> 32GB LPDDR4x</li>
+                            <li><strong>Storage:</strong> 1TB SSD</li>
+                            <li><strong>Display:</strong> 14.4" PixelSense (2400x1600), 120Hz, touch</li>
+                            <li><strong>Weight:</strong> 1.82kg (4.0 lbs)</li>
+                            <li><strong>Battery:</strong> 58Wh, ~10 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $2,100 - $2,700</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Versatile form factor with touchscreen and pen support</li>
+                            <li>Good build quality and innovative design</li>
+                            <li>Excellent display for visual tasks</li>
+                            <li>Decent performance for most data science tasks</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Limited GPU performance for deep learning</li>
+                            <li>Older generation processor</li>
+                            <li>Relatively expensive for the specifications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card alt-card">
+                        <h3>Acer Swift 3</h3>
+                        <p class="badge badge-accent">Budget Option</p>
+                        
+                        <h4>Key Specifications:</h4>
+                        <ul>
+                            <li><strong>Processor:</strong> Intel Core i5-1240P (12 cores, up to 4.4GHz)</li>
+                            <li><strong>Graphics:</strong> Intel Iris Xe Graphics</li>
+                            <li><strong>Memory:</strong> 16GB LPDDR4X</li>
+                            <li><strong>Storage:</strong> 512GB NVMe PCIe SSD</li>
+                            <li><strong>Display:</strong> 14" Full HD (1920x1080) IPS</li>
+                            <li><strong>Weight:</strong> 1.2kg (2.65 lbs)</li>
+                            <li><strong>Battery:</strong> 56Wh, ~10-12 hours for mixed use</li>
+                            <li><strong>Price Range:</strong> $800 - $1,000</li>
+                        </ul>
+                        
+                        <h4>Strengths:</h4>
+                        <ul>
+                            <li>Most affordable option</li>
+                            <li>Lightest and most portable laptop</li>
+                            <li>Good battery life</li>
+                            <li>Sufficient for learning data science fundamentals</li>
+                        </ul>
+                        
+                        <h4>Weaknesses:</h4>
+                        <ul>
+                            <li>Limited graphics capabilities (integrated GPU only)</li>
+                            <li>Insufficient RAM for large datasets</li>
+                            <li>Limited storage capacity</li>
+                            <li>Basic display with lower resolution</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="results">
+            <h2>Results and Analysis</h2>
+            <p>After conducting all pairwise comparisons and synthesizing the results using SuperDecisions software, the following rankings were obtained:</p>
+            
+            <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+            </div>
+            
+            <div class="card">
+                <h3>Alternative Rankings</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Alternative</th>
+                            <th>Total</th>
+                            <th>Normal</th>
+                            <th>Ideal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="ranking-1">
+                            <td>1</td>
+                            <td>Lenovo ThinkPad P16</td>
+                            <td>0.0777</td>
+                            <td>0.2331</td>
+                            <td>1.0000</td>
+                        </tr>
+                        <tr class="ranking-2">
+                            <td>2</td>
+                            <td>ASUS ROG Zephyrus G14</td>
+                            <td>0.0604</td>
+                            <td>0.1811</td>
+                            <td>0.7770</td>
+                        </tr>
+                        <tr class="ranking-3">
+                            <td>3</td>
+                            <td>MacBook Pro 16"</td>
+                            <td>0.0594</td>
+                            <td>0.1783</td>
+                            <td>0.7649</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Microsoft Surface Laptop Studio</td>
+                            <td>0.0492</td>
+                            <td>0.1476</td>
+                            <td>0.6330</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Dell XPS 15</td>
+                            <td>0.0482</td>
+                            <td>0.1447</td>
+                            <td>0.6210</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Acer Swift 3</td>
+                            <td>0.0384</td>
+                            <td>0.1152</td>
+                            <td>0.4944</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>Interpretation of Results:</h4>
+                <ul>
+                    <li><strong>Total:</strong> Raw priority values calculated by AHP</li>
+                    <li><strong>Normal:</strong> Normalized values that sum to 1.0 across all alternatives</li>
+                    <li><strong>Ideal:</strong> Values normalized to the highest-scoring alternative (set to 1.0)</li>
+                </ul>
+                
+                <p>The Lenovo ThinkPad P16 emerged as the clear winner with the highest score across all measures. Its exceptional performance capabilities, particularly in processing power, graphics, and memory, were the primary factors behind its top ranking. The workstation-class specifications make it particularly well-suited for intensive AI and data science workloads.</p>
+                
+                <p>The ASUS ROG Zephyrus G14 secured the second position, offering an excellent balance between performance and portability at a more moderate price point. Its strong GPU performance was a key factor in this ranking.</p>
+                
+                <p>The MacBook Pro 16" claimed third place, with its excellent display quality, build quality, and battery life compensating for some compatibility limitations with specialized AI software.</p>
+            </div>
+            
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="card">
+                        <h3>Criteria Contributions</h3>
+                        <p>The chart below shows how each criterion contributed to the overall ranking:</p>
+                        <canvas id="criteriaContributionChart"></canvas>
+                        
+                        <h4>Key Observations:</h4>
+                        <ul>
+                            <li>Performance Capabilities played the dominant role in the final rankings, accounting for 40% of the total weight</li>
+                            <li>Cost Considerations were the second most important factor at 25%</li>
+                            <li>Display Quality (15%), Portability (13%), and Connectivity (7%) had lesser but still significant impacts</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex-item">
+                    <div class="card">
+                        <h3>Performance Analysis</h3>
+                        <p>Performance across sub-criteria for the top three alternatives:</p>
+                        <canvas id="performanceComparisonChart"></canvas>
+                        
+                        <h4>Key Insights:</h4>
+                        <ul>
+                            <li>The ThinkPad P16 dominated in processor, graphics, memory, and storage due to its workstation-class components</li>
+                            <li>The ASUS ROG Zephyrus G14 showed strong graphics performance but was limited by its 16GB RAM</li>
+                            <li>The MacBook Pro offered balanced performance with optimization advantages for certain tasks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="sensitivity">
+            <h2>Sensitivity Analysis</h2>
+            <p>Sensitivity analysis was conducted to test how changes in criteria weights would affect the final rankings.</p>
+            
+            <div class="chart-container">
+                <canvas id="sensitivityChart"></canvas>
+            </div>
+            
+            <div class="card">
+                <h3>Key Findings from Sensitivity Analysis</h3>
+                <ul>
+                    <li><strong>Performance Priority Threshold:</strong> The ThinkPad P16 remains the optimal choice as long as Performance Capabilities weight is above 35%. Below this threshold, the ASUS ROG or MacBook Pro may become preferred.</li>
+                    <li><strong>Cost Sensitivity:</strong> If Cost Considerations weight increases beyond 40%, the ASUS ROG would become the preferred option, followed by the Acer Swift 3.</li>
+                    <li><strong>Portability Impact:</strong> If Portability weight increases beyond 25%, the Acer Swift 3 would move up significantly in the rankings due to its lightweight design.</li>
+                </ul>
+                
+                <p>The sensitivity analysis confirms that the model is robust for students who prioritize performance for data science and AI tasks. However, students with different priorities (e.g., budget constraints or high mobility needs) may prefer alternatives other than the top-ranked ThinkPad P16.</p>
+            </div>
+        </div>
+        
+        <div class="section" id="conclusion">
+            <h2>Conclusion and Recommendations</h2>
+            
+            <div class="card">
+                <h3>Summary of Findings</h3>
+                <p>This multi-criteria decision analysis has systematically evaluated six laptop alternatives based on five main criteria and their respective sub-criteria. The analysis was conducted using the Analytic Hierarchy Process implemented through SuperDecisions software.</p>
+                
+                <p>The results demonstrate that the Lenovo ThinkPad P16 is the optimal choice for a Data Science and AI student, primarily due to its exceptional processing power, graphics capabilities, and memory capacity. These performance features are crucial for handling complex machine learning models, large datasets, and intensive computational tasks.</p>
+                
+                <p>However, the analysis also highlights that different students may have varying priorities based on their specific circumstances:</p>
+                
+                <ul>
+                    <li>Students with budget constraints may find the ASUS ROG Zephyrus G14 offers better value for money while still providing strong performance capabilities.</li>
+                    <li>Those requiring maximum portability may prefer the Acer Swift 3 or ASUS ROG Zephyrus G14 for their lighter weight and better battery life.</li>
+                    <li>Students working within the Apple ecosystem may benefit from the MacBook Pro 16" despite its third-place ranking.</li>
+                </ul>
+                
+                <h3>Final Recommendation</h3>
+                <p>For Data Science and AI students who prioritize performance and can accommodate the higher price point, the Lenovo ThinkPad P16 is the recommended choice. Its professional-grade specifications make it particularly well-suited for advanced machine learning, deep learning, and data analytics tasks that will become increasingly important as students progress in their studies.</p>
+                
+                <p>For students with budget constraints or those who value portability more highly, the ASUS ROG Zephyrus G14 offers an excellent balance of performance, portability, and value.</p>
+            </div>
+            
+            <div class="card">
+                <h3>References</h3>
+                <ul>
+                    <li>Analytical Hierarchy Process (AHP) in Multi-Criteria Decision Making. (2023). SuperDecisions Software Documentation.</li>
+                    <li>Dell. (n.d.). Dell XPS 15 Technical Specifications.</li>
+                    <li>Esichaikul, V. (2025). Business Intelligence and Analytics (AT82.04) Course Materials. Asian Institute of Technology.</li>
+                    <li>Lenovo. (n.d.). ThinkPad P16 Mobile Workstation Specifications.</li>
+                    <li>Apple. (n.d.). MacBook Pro Technical Specifications.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Created by Arya Bhavesh Shah (st125462)</p>
+            <p>Asian Institute of Technology | Business Intelligence and Analytics | March 2025</p>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
